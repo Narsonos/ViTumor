@@ -17,7 +17,7 @@ def PositionEmbedding(seq_len, emb_size):
     for i in range(seq_len):
         for j in range(emb_size):
             embeddings[i][j] = np.sin(i / (pow(10000,j/emb_size))) if j%2==0  else np.cos(i / (pow(10000, (j - 1) / emb_size)))
-    return torch.tensor(embeddings)
+    return torch.clone(embeddings).detach()
 
 class PatchEmbedding(nn.Module):
     def __init__(self, in_channels=3, patch_size=16, emb_size=768, img_size=224):
