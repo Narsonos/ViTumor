@@ -1,6 +1,6 @@
 ### Brain Tumor: dataset
 Dataset for the analysis is provided at Kaggle: 
-https://www.kaggle.com/datasets/mohammadhossein77/brain-tumors-dataset?resource=download
+https://www.kaggle.com/datasets/mohammadhossein77/brain-tumors-dataset?resource=download<br>
 Dataset that could be good to use for testing after learning process:
 https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data
 
