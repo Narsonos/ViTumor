@@ -12,7 +12,7 @@ https://www.kaggle.com/datasets/masoudnickparvar/brain-tumor-mri-dataset/data
 #### Datasets
 The datasets mentioned above (further refered to as Data and Data2 respectively) are sets of images split onto 4 classes - Normal and 3 types of brain tumors. The datasets must be downloaded from the source and extracted into *Data* and *Data1* folders resp.<br>
 1. The *Data* is used for learning process
-2. The *Data2* is used for sample predictions in main.py. The image path must be ./Data2/Testing/<randomly_picked_class>/<filename.jpg>
+2. The *Data2* is used for sample predictions in main.py. <br>The image path must be ./Data2/Testing/<randomly_picked_class>/<filename.jpg>
 
 #### Models
 Available models are following the VisualTransformer architecture and the filenames are self-describing.<br>
