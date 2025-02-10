@@ -49,7 +49,7 @@ class MultiHead(nn.Module):
         self.value = nn.Linear(emb_size,emb_size)
         self.query = nn.Linear(emb_size,emb_size)
         self.att_dr = nn.Dropout(0.1)
-
+        self.att_w = None
 
     def forward(self,x):
         k = rearrange(self.key(x), 'b n (h e) -> b h n e', h =self.num_head)
@@ -59,7 +59,7 @@ class MultiHead(nn.Module):
         wei = q@k.transpose(3,2)/self.num_head**0.5
         wei = F.softmax(wei, dim=2)
         wei = self.att_dr(wei)
-
+        self.att_w = wei
         out = wei@v 
         out = rearrange(out, 'b h n e -> b n (h e)')
         return out
